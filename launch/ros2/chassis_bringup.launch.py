@@ -88,6 +88,7 @@ def generate_launch_description():
             name='hex_chassis',
             output='screen',
             emulate_tty=True,
+            additional_env={'OPENBLAS_NUM_THREADS': '1'},
             parameters=[{
                 'frame_id': LaunchConfiguration('frame_id'),
                 'simple_mode': LaunchConfiguration('simple_mode'),
